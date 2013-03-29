@@ -86,7 +86,7 @@ searchplos <- function(terms = NA, fields = NA, toquery = NA, start = 0, limit =
   } else
     { 
     	getvecs <- seq(from=1, to=getnumrecords, by=500)
-    	lastnum <- as.numeric(str_extract(getnumrecords, "[0-9]{3}$"))-1
+    	lastnum <- as.numeric(str_extract(getnumrecords, "[0-9]{3}$"))
     	if(lastnum > 500){
     		lastnum <- getnumrecords-getvecs[length(getvecs)]
     	} else 
